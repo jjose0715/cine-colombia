@@ -1,22 +1,23 @@
-let contenedor=document.getElementById("container")
-contenedor.addEventListener("click"),function(event){
 
+let contenedor=document.getElementById("contenedor")
+contenedor.addEventListener("click",function(evento){
 
+    if(evento.target.classList.contains("w-100")){
+        evento.target.src="img/rojo.png"
+        
+    }
+})
 
-}
 //recibir datos del teclado//
 let etiquetaBoton=document.getElementById("boton");
 etiquetaBoton.addEventListener("click",escuchar);
 function escuchar(event){
     event.preventDefault();
     console.log("hizo click");
-    let pelicula=document.getElementById("pelicula").value;
-    console.log(pelicula)
+    let peliculas=document.getElementById("peliculas").value;
+    console.log(peliculas);
     let asientos=document.getElementById("asientos").value;
-    console.log(Asientos)
-    let TipoAsiento=document.getElementById("tipo asiento").value;
-    console.log(tipoAsiento)
-    if(asientos=<34){
-        alert("no hay tantos asientos para escojer")
-    }
+    console.log(asientos);
+    let tipoAsiento=document.getElementById("tipoAsiento").value;
+    console.log(tipoAsiento);
 }
