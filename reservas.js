@@ -1,10 +1,18 @@
 
 let contenedor=document.getElementById("contenedor")
-contenedor.addEventListener("click",function(evento){
+contenedor.addEventListener("click",function(event){
 
-    if(evento.target.classList.contains("w-100")){
-        evento.target.src="img/rojo.png"
+    if(event.target.classList.contains("w-100")){
+        event.target.src="img/rojo.png"
         
+    }
+
+
+
+    else{
+        if(event.target.classList.contains("w-100")){
+        event.target.src="img/cinema-chair.png"
+        }
     }
 })
 
@@ -18,6 +26,21 @@ function escuchar(event){
     console.log(peliculas);
     let asientos=document.getElementById("asientos").value;
     console.log(asientos);
-    let tipoAsiento=document.getElementById("tipoAsiento").value;
-    console.log(tipoAsiento);
+    let tipoasiento=document.getElementById("tipoasiento").value;
+    console.log(tipoasiento);
+
+    if (tipoasiento=="Preferencial"){
+        let preferencial= 5000;
+        let valor=preferencial*asientos;
+        alert("por querer ver "+peliculas+ " ,El total a pagar es $"+valor)
+    }else{
+        let general= 2000;
+        let valor=general*asientos;
+        alert("por querer ver "+peliculas+ " ,El total a pagar es $"+valor)
+    }
+   
+
 }
+
+
+    
